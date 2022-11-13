@@ -1,16 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import RoutePage from './Components/Route';
 
+const router = createBrowserRouter([
+  {
+    path: '/', element: <RoutePage />, children: [
+      { path: '/', element: <div>Sami gage</div> }
+    ],
+  },
+])
 function App() {
   return (
     <div className="App">
-      <h1>Sami Ahmed</h1>
-      <button className="btn btn-active">Button</button>
-      <button className="btn btn-active btn-primary">Button</button>
-      <button className="btn btn-active btn-secondary">Button</button>
-      <button className="btn btn-active btn-accent">Button</button>
-      <button className="btn btn-active btn-ghost">Button</button>
-      <button className="btn btn-active btn-link">Button</button>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
