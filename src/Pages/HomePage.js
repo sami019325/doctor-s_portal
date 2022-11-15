@@ -10,6 +10,8 @@ import LeftImgCard from '../Components/LeftImgCard';
 import treatment from './../Resources/assets/images/treatment.png'
 import doctorImg from './../Resources/assets/images/doctor.png'
 import DoctorsKolla from '../Components/DoctorsKolla';
+import ReviewHome from '../Components/ReviewHome';
+import ContractUS from '../Components/ContractUS';
 
 const HomePage = () => {
 
@@ -93,6 +95,13 @@ const HomePage = () => {
                         }
                     }
                 ></DoctorsKolla>
+                {/* reviews   */}
+                <div className='w-10/12 m-auto mt-20 hidden lg:block'>
+                    <ReviewHome></ReviewHome>
+                </div>
+                <div>
+                    <ContractUS></ContractUS>
+                </div>
             </div>
         </div>
     );
