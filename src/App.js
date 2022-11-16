@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import RoutePage from './Components/Route';
 import HomePage from './Pages/HomePage';
 import Appointment from './Pages/Appintment';
-
+import 'react-day-picker/dist/style.css';
 const router = createBrowserRouter([
   {
     path: '/', element: <RoutePage />, children: [
