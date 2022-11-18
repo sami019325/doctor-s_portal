@@ -6,7 +6,6 @@ const AvailableAppintment = (data) => {
     console.log(data.footer.props.children[1])
     const [appliontemnets, setAppointments] = useState([])
     const [bookedSlot, setBookedSlot] = useState(['ss'])
-    console.log('declared--------------', setBookedSlot)
 
     useEffect(() => {
         fetch('AppointmentOptions.json')
@@ -22,12 +21,17 @@ const AvailableAppintment = (data) => {
                         <AvailableOptionsOfApointmnet
                             key={slot._id}
                             option={slot}
-                            BookedSlotCall={'bookedSlot'}
+                            bookedSlotCall={setBookedSlot}
                         ></AvailableOptionsOfApointmnet>
                     </>)
                 }
             </div>
-            <BookingModal></BookingModal>
+            <div>
+                <BookingModal
+                    appliontemnets={data.footer.props.children[1]}
+                    bookedSlot={bookedSlot}
+                ></BookingModal>
+            </div>
         </div>
     );
 };

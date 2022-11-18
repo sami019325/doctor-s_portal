@@ -1,15 +1,15 @@
 import React from 'react';
 import Btn from './Btn';
 
-const AvailableOptionsOfApointmnet = (options, BookedSlotCall) => {
-    const { name, slots } = options.option;
-    const { bookedSlot } = BookedSlotCall;
-    // const { setBookedSlot } = BookedSlotCall;
+const AvailableOptionsOfApointmnet = ({ option, bookedSlotCall }) => {
+    const { name, slots } = option;
+    // const setBookedSlot = bookedSlotCall.setBookedSlot;
+    // const { setBookedSlot } = bookedSlotCall;
     // const BookedSlot = setBookedSlot.setBookedSlot
-    console.log('--------------------------- ', bookedSlot)
+    // console.log('--------------------------- ', bookedSlotCall)
     const setBooked = () => {
         console.log('-------------------booking')
-        BookedSlotCall('samissssssssssssss')
+        bookedSlotCall(slots)
     }
 
     return (

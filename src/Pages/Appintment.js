@@ -25,8 +25,9 @@ const Appointment = () => {
 
                     />
                 </div>
-                <AvailableAppintment footer={footer}></AvailableAppintment>
             </div>
+            <AvailableAppintment footer={footer}></AvailableAppintment>
+
         </div>
     );
 };
