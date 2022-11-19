@@ -4,13 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import SharedRoute from './SharedRoute.js/SharedRoute';
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+
+const queryClient = new QueryClient()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <SharedRoute>
-      <App />
-    </SharedRoute>
+    <QueryClientProvider client={queryClient}>
+      <SharedRoute>
+        <App />
+      </SharedRoute>
+    </QueryClientProvider>
+
   </React.StrictMode>
 );
 
